@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1.4 Data&APIs</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""
+        ></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <div id="info">
+                <header>
+                    <img src="graphics/iss-logo.svg" alt="ISS" />
+                    <h1>Realtime ISS location</h1>
+                </header>
+                <h2>Real-time data</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Altitude</strong></td>
+                            <td><span id="altitude">260.15</span> km</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Velocity</strong></td>
+                            <td><span id="velocity">17,136.45</span> km/h</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Latitude</strong></td>
+                            <td id="latitude">-9.7073648928153</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Longitude</strong></td>
+                            <td id="longitude">-70.755894178558</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Options</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>Center ISS</strong></td>
+                            <td>
+                                <input type="checkbox" id="center" checked />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pause Updates</strong></td>
+                            <td><input type="checkbox" id="pause" /></td>
+                        </tr>
+
+                        <tr></tr>
+                    </tbody>
+                </table>
+                <h2>Credit</h2>
+                <p>
+                    <a href="https://wheretheiss.at/w/developer"
+                        >Where the ISS at?</a
+                    >
+                </p>
+                <p>
+                    <a href="https://leafletjs.com/">Leaflet.js</a>
+                </p>
+                <p>
+                    <a href="https://www.openstreetmap.org/">OpenStreetMaps</a>
+                </p>
+                <p>
+                    <a
+                        href="https://www.pngkit.com/view/u2q8i1r5q8u2r5t4_download-svg-download-png-international-space-station-icon/"
+                        >PNG Kit (ISS Graphics)</a
+                    >
+                </p>
+                <p>
+                    <a href="https://freebiesupply.com/logos/iss-logo-3/"
+                        >Freebie Supply (ISS Logo)</a
+                    >
+                </p>
+            </div>
+            <div id="ISS-map">
+                <img
+                    src="graphics/space-station.png"
+                    alt="ISS"
+                    id="ISS-center"
+                />
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
